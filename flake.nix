@@ -7,7 +7,7 @@
     with import nixpkgs;
     let
       name = "launchd_shim";
-      systems = [ "x86_64-darwin" ];
+      systems = [ "x86_64-darwin" "aarch64-darwin" ];
       forAllSystems = flake-utils.lib.eachSystem systems;
       src = self;
     in
